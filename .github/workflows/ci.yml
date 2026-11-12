@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x, 18.x, 20.x, 22.x]
-        cypress-version: [9.x, 10.x, 11.x, 12.x, 13.x, 14.x, 15.x]
+        node-version: [16.x, 18.x, 20.x, 22.x, 24.x, 26.x]
+        cypress-version: [9.x, 10.x, 11.x, 12.x, 13.x, 14.x, 15.x, 16.x]
         exclude:
           - node-version: 16.x
             cypress-version: 14.x
@@ -22,6 +22,12 @@ jobs:
             cypress-version: 15.x
           - node-version: 18.x
             cypress-version: 15.x
+          - node-version: 16.x
+            cypress-version: 16.x
+          - node-version: 18.x
+            cypress-version: 16.x
+          - node-version: 20.x
+            cypress-version: 16.x
       fail-fast: false
     steps:
       - name: Checkout
